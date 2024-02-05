@@ -1,8 +1,4 @@
-
-
-
 import 'package:flutter/cupertino.dart';
-
 
 import 'package:flutter/material.dart';
 
@@ -26,10 +22,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
-
-
 class CatalogMain extends StatefulWidget {
   const CatalogMain({super.key});
 
@@ -42,24 +34,9 @@ class _CatalogMainState extends State<CatalogMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 75, right: 90),
-          child: Text(
-            "Catalog",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-          ),
-        ),
-      ),
       body: GridView.count(
         crossAxisCount: 3,
         children: List.generate(imageUrls.length, (index) {
-          //container nomlar
-          String category = containerName[index];
-
-          // rasmlar  chiqadi
-          String imageUrl = imageUrls[index];
-
           return Column(
             children: [
               Container(
@@ -127,11 +104,6 @@ class _CatalogMainState extends State<CatalogMain> {
     );
   }
 }
-
-
-
-
-
 
 class SingleProduct extends StatefulWidget {
   const SingleProduct({super.key});
